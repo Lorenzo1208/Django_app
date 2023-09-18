@@ -1,0 +1,58 @@
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+  }
+  
+  form {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form p {
+      margin: 10px 0;
+  }
+  
+  form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+  
+  form input, form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+  }
+  
+  button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+  }
+
+  button:hover {
+      background-color: #45a049;
+  }
+</style>
+
+<form method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">S'inscrire</button>
+</form>
