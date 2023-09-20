@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from app.views import home, m, inscription, connexion  # Importez la vue hello_world depuis l'application app
+from .views import PatientFormView
+from .views import StressEvaluationForm
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +27,6 @@ urlpatterns = [
     path('m/', m, name='m'),
     path('inscription/', inscription, name='inscription'),
     path('connexion/', connexion, name='connexion'),
+    path('patient_form/', PatientFormView.as_view(), name='patient_form'),
+    path('stress_from/', views.evaluate_stress, name='evaluate_stress'),
 ]
