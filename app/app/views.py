@@ -14,6 +14,15 @@ def home(request):
 def m(request):
     return render(request, 'm.html')
 
+from django.contrib.auth import logout
+from django.shortcuts import redirect
+
+def deconnexion_view(request):
+    # Déconnecte l'utilisateur
+    logout(request)
+    # Redirige vers la page d'accueil
+    return redirect('home')
+
 def inscription(request):
     if request.method == 'POST':
         form = InscriptionForm(request.POST)
@@ -48,19 +57,28 @@ def connexion(request):
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic.edit import FormView
-from .forms import PatientForm  # Ajustez le chemin d'importation en fonction de la structure de votre projet
+from .forms import PatientForm  # Adjust the import path based on your project structure
+from .models import PatientDailyForm  # Import your model here
 
 class PatientFormView(FormView):
-    template_name = 'patient_form.html'  # Remplacez par le chemin de votre template
+    template_name = 'patient_form.html' 
     form_class = PatientForm
-    success_url = reverse_lazy('success')  # Remplacez par l'URL de votre choix
+    success_url = reverse_lazy('home') 
 
     def form_valid(self, form):
-        # Ici, vous pouvez ajouter la logique pour gérer les données du formulaire validé, par exemple enregistrer les données dans la base de données
+        # Create a new instance of the model and populate it with form data
+        patient_daily_form = form.save(commit=False)  # Don't save it to the database yet
+
+        # You can set any additional fields on the model here if needed
+        patient_daily_form.user = self.request.user  # Assuming you want to associate the form with the logged-in user
+
+        # Now, save the model instance to the database
+        patient_daily_form.save()
+
         return super().form_valid(form)
 
     def form_invalid(self, form):
-        # Ici, vous pouvez ajouter une logique supplémentaire pour gérer les formulaires non valides si nécessaire
+        # Handle invalid form submission here if needed
         return super().form_invalid(form)
 
 from django.shortcuts import render, redirect
@@ -77,3 +95,35 @@ def evaluate_stress(request):
         form = StressEvaluationForm()
 
     return render(request, 'form_template.html', {'form': form})
+
+from django.shortcuts import render, redirect
+from .models import TestModel  # Importez le modèle TestModel
+from django.shortcuts import render, redirect
+from .forms import TestForm
+from django.contrib.auth.decorators import login_required  # Importez le décorateur login_required
+
+@login_required  # Appliquez le décorateur login_required pour vérifier que l'utilisateur est connecté
+def test_form_view(request):
+    if request.method == 'POST':
+        form = TestForm(request.POST)
+        if form.is_valid():
+            # Capturer l'utilisateur connecté
+            user = request.user
+
+            # Processus de sauvegarde du formulaire
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+
+            # Créez et sauvegardez le modèle avec l'utilisateur connecté associé
+            test_model = TestModel(name=name, email=email, user=user)
+            test_model.save()
+
+            # Redirigez vers la page de réussite
+            return redirect('success')
+    else:
+        form = TestForm()
+
+    return render(request, 'test_form_template.html', {'form': form})
+
+def success_view(request):
+    return render(request, 'success_template.html') 

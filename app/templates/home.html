@@ -57,14 +57,20 @@ main {
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Accueil</a></li>
-                <li><a href="{% url 'm' %}">Espace Médecin</a></li>
-                <li><a href="{% url 'm' %}">Espace Administrateur</a></li>
-                <li><a href="{% url 'patient_form' %}">Espace Patient</a></li>
+                <li><a href="{% url 'test_form_view' %}">Formulaire Test</a></li>
+                <li><a href="{% url 'patient_form' %}">Formulaire Quotidien</a></li>
                 <li><a href="{% url 'evaluate_stress' %}">Formulaire Stress</a></li>
-                <li class="user-auth">
-                    <a href="{% url 'connexion' %}">Connexion</a>
-                    <a href="{% url 'inscription' %}">Inscription</a>
-                </li>
+                {% if not user.is_authenticated %}
+        <li class="user-auth">
+            <a href="{% url 'connexion' %}">Connexion</a>
+            <a href="{% url 'inscription' %}">Inscription</a>
+        </li>
+        {% endif %}
+        {% if user.is_authenticated %}
+        <li class="user-auth">
+            <a href="{% url 'deconnexion' %}">Déconnexion</a>
+        </li>
+        {% endif %}
             </ul>
         </nav>
     </header>

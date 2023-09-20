@@ -1,11 +1,12 @@
 from django.contrib.auth.forms import UserCreationForm
 from .models import User
 from django import forms
+from datetime import datetime, timedelta
 
 class InscriptionForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['username', 'email', 'first_name', 'last_name', 'user_type']
+        fields = ['username', 'email', 'first_name', 'last_name']
 
 class PatientForm(forms.Form):
     # Informations générales
@@ -109,3 +110,9 @@ class StressEvaluationForm(forms.Form):
     mains_moites = forms.ChoiceField(choices=CHOICES, widget=forms.RadioSelect)
 
     total_impact_du_stress_dans_votre_vie_actuelle = forms.IntegerField(initial=0, required=False)
+
+class TestForm(forms.Form):
+    name = forms.CharField(label="Name", max_length=100)
+    email = forms.EmailField(label="Email")
+    User = forms.IntegerField(widget=forms.HiddenInput(), required=False)
+    
