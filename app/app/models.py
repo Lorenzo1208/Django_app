@@ -172,7 +172,9 @@ class StressEvaluationForm(models.Model):
     'difficulte_a_se_remettre_dun_evenement_contrariant', 
     'mains_moites'
 ]
-
+    for symptom in SYMPTOMS:
+        locals()[symptom] = models.IntegerField(choices=CHOICES, default=0)
+        
     total_impact_du_stress_dans_votre_vie_actuelle = models.IntegerField(default=0, blank=True)
 
     def save(self, *args, **kwargs):

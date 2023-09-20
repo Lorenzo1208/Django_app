@@ -67,7 +67,7 @@ class PatientFormView(FormView):
             return self.form_invalid(form)
 
         return super().form_valid(form)
-
+    
 def evaluate_stress(request):
     if request.method == 'POST':
         form = StressEvaluationFormForm(request.POST)

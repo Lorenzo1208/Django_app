@@ -1,9 +1,190 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+.form-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.form-section label {
+    margin-bottom: 10px;
+    color: #555;
+}
+.form-section input, .form-section select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.form-section textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;  /* Réduction de la taille de la police */
+    height: 60px;  /* Réduction de la hauteur */
+}
+.form-section button, .form-section input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #434643;  /* Changement de la couleur de fond en vert */
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+.form-section button:hover, .form-section input[type="submit"]:hover {
+    background-color: #218838;
+}
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+.progress-bar {
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+.progress-bar-inner {
+    width: 0;
+    height: 25px;
+    background-color: #4caf50;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+}
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.form-field {
+    display: none;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #434643;  /* Couleur de fond du bouton */
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background-color: #218838;  /* Couleur de fond du bouton lors du survol */
+}
+
+</style>
+<div class="progress-bar">
+    <div class="progress-bar-inner">0%</div>
+</div>
+    <title>Évaluation du niveau de stress</title>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Soumettre</button>
+        <div class="form-section" id="section-general">
+            <button type="button" onclick="navigateTo('section-cardiaque')">Suivant →</button>
+            <h2>Informations générales</h2>
+            Poids: {{ form.poids }} {{ form.poids.errors }}<br>
+            Tour de taille: {{ form.tour_de_taille }} {{ form.tour_de_taille.errors }}<br>
+        </div>
+        <div class="form-section" id="section-cardiaque" style="display: none;">
+            <button type="button" onclick="navigateTo('section-general')">← Précédent</button>
+            <button type="button" onclick="navigateTo('section-medicaments')">Suivant →</button>
+            <h2>Informations cardiaques et tension artérielle</h2>
+            Fréquence cardiaque: {{ form.frequence_cardiaque }} {{ form.frequence_cardiaque.errors }}<br>
+            Tension artérielle matin (systolique): {{ form.tension_arterielle_matin_systolique }} {{ form.tension_arterielle_matin_systolique.errors }}<br>
+            Tension artérielle soir (systolique): {{ form.tension_arterielle_soir_systolique }} {{ form.tension_arterielle_soir_systolique.errors }}<br>
+            Tension artérielle matin (diastolique): {{ form.tension_arterielle_matin_diastolique }} {{ form.tension_arterielle_matin_diastolique.errors }}<br>
+            Tension artérielle soir (diastolique): {{ form.tension_arterielle_soir_diastolique }} {{ form.tension_arterielle_soir_diastolique.errors }}<br>
+            Symptômes cardiovasculaires: {{ form.symptomes_cardiovasculaires }} {{ form.symptomes_cardiovasculaires.errors }}<br>
+        </div>
+        <div class="form-section" id="section-medicaments" style="display: none;">
+            <button type="button" onclick="navigateTo('section-cardiaque')">← Précédent</button>
+            <button type="button" onclick="navigateTo('section-alimentation')">Suivant →</button>
+            <h2>Prise de médicaments</h2>
+            Nombre de médicaments par jour: {{ form.nombre_medicaments_jour }} {{ form.nombre_medicaments_jour.errors }}<br>
+            Oubli de médicament le matin: {{ form.oublie_medicament_matin }} {{ form.oublie_medicament_matin.errors }}<br>
+            Oubli de médicament le soir: {{ form.oublie_medicament_soir }} {{ form.oublie_medicament_soir.errors }}<br>
+            Effets secondaires: {{ form.effets_secondaires }} {{ form.effets_secondaires.errors }}<br>
+            Symptômes particuliers: {{ form.symptomes_particuliers }} {{ form.symptomes_particuliers.errors }}<br>
+            Description des effets et symptômes: {{ form.description_effets_symptomes }} {{ form.description_effets_symptomes.errors }}<br>
+        </div>
+        <div class="form-section" id="section-alimentation" style="display: none;">
+            <button type="button" onclick="navigateTo('section-medicaments')">← Précédent</button>
+            <button type="button" onclick="navigateTo('section-symptomes-supplementaires')">Suivant →</button>
+            <h2>Alimentation et activité physique</h2>
+            Consommation d'alcool: {{ form.consommation_alcool }} {{ form.consommation_alcool.errors }}<br>
+            Grignotage sucré: {{ form.grignotage_sucre }} {{ form.grignotage_sucre.errors }}<br>
+            Grignotage salé: {{ form.grignotage_sale }} {{ form.grignotage_sale.errors }}<br>
+            Nombre de repas par jour: {{ form.nombre_repas_jour }} {{ form.nombre_repas_jour.errors }}<br>
+            Quantité d'eau: {{ form.quantite_eau }} {{ form.quantite_eau.errors }}<br>
+            Quantité d'alcool: {{ form.quantite_alcool }} {{ form.quantite_alcool.errors }}<br>
+            Activité physique: {{ form.activite_physique }} {{ form.activite_physique.errors }}<br>
+            Nature de l'activité physique: {{ form.nature_activite_physique }} {{ form.nature_activite_physique.errors }}<br>
+            Durée de l'activité physique: {{ form.duree_activite_physique }} {{ form.duree_activite_physique.errors }}<br>
+        </div>
+        <div class="form-section" id="section-symptomes-supplementaires" style="display: none;">
+            <button type="button" onclick="navigateTo('section-alimentation')">← Précédent</button>
+            <h2>Symptômes supplémentaires</h2>
+            Présence de dyspnée: {{ form.presence_dyspnee }} {{ form.presence_dyspnee.errors }}<br>
+            Présence d'œdème: {{ form.presence_oedeme }} {{ form.presence_oedeme.errors }}<br>
+            Épisode infectieux: {{ form.presence_episode_infectieux }} {{ form.presence_episode_infectieux.errors }}<br>
+            Présence de fièvre: {{ form.presence_fievre }} {{ form.presence_fievre.errors }}<br>
+            Présence de palpitation: {{ form.presence_palpitation }} {{ form.presence_palpitation.errors }}<br>
+            Douleur thoracique: {{ form.presence_douleur_thoracique }} {{ form.presence_douleur_thoracique.errors }}<br>
+            Présence de malaise: {{ form.presence_malaise }} {{ form.presence_malaise.errors }}<br>
+            Heure de début des palpitations: {{ form.heure_debut_palpitations }} {{ form.heure_debut_palpitations.errors }}<br>
+            Durée des palpitations: {{ form.duree_palpitations }} {{ form.duree_palpitations.errors }}<br>
+            Heure de début des douleurs thoraciques: {{ form.heure_debut_douleurs_thoraciques }} {{ form.heure_debut_douleurs_thoraciques.errors }}<br>
+            Durée des douleurs thoraciques: {{ form.duree_douleurs_thoraciques }} {{ form.duree_douleurs_thoraciques.errors }}<br>
+            Heure de début des malaises: {{ form.heure_debut_malaises }} {{ form.heure_debut_malaises.errors }}<br>
+            Durée des malaises: {{ form.duree_malaises }} {{ form.duree_malaises.errors }}<br>
+        </div>
+        
+        <input type="submit" value="Soumettre" class="submit-button">
+
     </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        let currentSection = 0;
+        const sections = [
+            'section-general', 
+            'section-cardiaque', 
+            'section-medicaments', 
+            'section-alimentation', 
+            'section-symptomes-supplementaires'
+        ];
+        
+        function navigateTo(sectionId) {
+            currentSection = sections.indexOf(sectionId);
+            $('.form-section').hide();
+            $('#' + sectionId).fadeIn();
+            updateProgressBar();
+        }
+    
+        function updateProgressBar() {
+            const progress = ((currentSection / (sections.length - 1)) * 100).toFixed(0);
+            $('.progress-bar-inner').css('width', progress + '%').text(progress + '%');
+        }
+    
+        $(document).ready(function() {
+            navigateTo('section-general');
+            updateProgressBar();  // Appeler la fonction ici
+        });
+    </script>
 {% endblock %}

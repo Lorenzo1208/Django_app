@@ -55,7 +55,6 @@
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Accueil</a></li>
-                <li><a href="{% url 'test_form_view' %}">Formulaire Test</a></li>
                 <li><a href="{% url 'patient_form' %}">Formulaire Quotidien</a></li>
                 <li><a href="{% url 'evaluate_stress' %}">Formulaire Stress</a></li>
                 {% if not user.is_authenticated %}

@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from app.views import home, m, inscription, connexion  # Importez la vue hello_world depuis l'application app
-from .views import PatientFormView, test_form_view
+from .views import PatientFormView
 from .views import StressEvaluationForm
 from . import views
 
@@ -29,7 +29,6 @@ urlpatterns = [
     path('connexion/', connexion, name='connexion'),
     path('patient_form/', PatientFormView.as_view(), name='patient_form'),
     path('stress_from/', views.evaluate_stress, name='evaluate_stress'),
-    path('test/', views.test_form_view, name='test_form_view'),
     path('success/', views.success_view, name='success'),  # Remplacez views.success_view par la vue que vous souhaitez afficher après la soumission du formulaire
     path('deconnexion/', views.deconnexion_view, name='deconnexion'),
 
