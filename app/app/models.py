@@ -61,7 +61,7 @@ class DataAnalysis(models.Model):
     # autres champs pour stocker les résultats des analyses de données
 
 class PatientDailyForm(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateField(auto_now_add=True)
     # Informations générales
     poids = models.FloatField(validators=[MinValueValidator(30.0), MaxValueValidator(300.0)])
@@ -113,12 +113,17 @@ class PatientDailyForm(models.Model):
 
     def save(self, *args, **kwargs):
         if not PatientDailyForm.objects.filter(user=self.user, date=datetime.now().date()).exists():
-            super().save(*args, **kwargs)
+            if self.user.user_type == 'PATIENT':
+                super().save(*args, **kwargs)
+            else:
+                raise ValueError("Seuls les patients peuvent soumettre ce formulaire")
         else:
             raise ValueError("Vous ne pouvez soumettre ce formulaire qu'une fois par jour")
 
 class StressEvaluationForm(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    score = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
     date = models.DateField(auto_now_add=True)
     CHOICES = [
         (0, "0"),
