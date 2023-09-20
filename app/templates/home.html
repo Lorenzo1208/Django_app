@@ -1,104 +1,23 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediAnalytix</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <style>
-body {
-    font-family: Arial, sans-serif;
-    padding-right: 20px; /* Décale le contenu du body vers la droite */
-}
-h1 {
-    text-align: center;
-}
-nav {
-    width: 100%; /* S'assure que la nav bar prend toute la largeur */
-    padding-right: 20px; /* Annule le padding-right du body */
-}
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    display: flex;
-}
-nav ul li {
-    float: left;
-}
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 12px 14px;
-    text-decoration: none;
-}
-nav ul li a:hover {
-    background-color: #111;
-}
-.user-auth {
-    margin-left: auto;
-    display: flex;
-    gap: 10px;
-}
+{% extends 'base.html' %}
 
-main {
-    padding: 15px;
-}
-    </style>
-    
-</head>
-<body>
-    <h1>MediAnalytix</h1>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="{% url 'home' %}">Accueil</a></li>
-                <li><a href="{% url 'test_form_view' %}">Formulaire Test</a></li>
-                <li><a href="{% url 'patient_form' %}">Formulaire Quotidien</a></li>
-                <li><a href="{% url 'evaluate_stress' %}">Formulaire Stress</a></li>
-                {% if not user.is_authenticated %}
-        <li class="user-auth">
-            <a href="{% url 'connexion' %}">Connexion</a>
-            <a href="{% url 'inscription' %}">Inscription</a>
-        </li>
-        {% endif %}
-        {% if user.is_authenticated %}
-        <li class="user-auth">
-            <a href="{% url 'deconnexion' %}">Déconnexion</a>
-        </li>
-        {% endif %}
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="presentation">
-            <h2>Bienvenue sur MediAnalytix</h2>
-            <p>Nous facilitons la conduite d'enquêtes de santé publique en connectant les professionnels de la santé et les patients de manière sécurisée et efficace.</p>
-        </section>
-        
-        <section id="features">
-            <h2>Fonctionnalités Principales</h2>
-            <ul>
-                <li>Analyse des données de santé en temps réel</li>
-                <li>Gestion sécurisée des comptes patients et médecins</li>
-                <li>Création et gestion d'enquêtes de santé publique</li>
-                <li>Outils d'analyse avancée pour des insights précis</li>
-            </ul>
-        </section>
-        
-        <section id="contact">
-            <h2>Contactez-Nous</h2>
-            <p>Pour toute question ou assistance, n'hésitez pas à <a href="mailto:support@medianalytix.fr">nous contacter</a>.</p>
-        </section>
-        
-        {% block content %}
-        {% endblock %}
-    </main>
-</body>
-</html>
+{% block content %}
+<section id="presentation">
+    <h2>Bienvenue sur MediAnalytix</h2>
+    <p>Nous facilitons la conduite d'enquêtes de santé publique en connectant les professionnels de la santé et les patients de manière sécurisée et efficace.</p>
+</section>
 
+<section id="features">
+    <h2>Fonctionnalités Principales</h2>
+    <ul>
+        <li>Analyse des données de santé en temps réel</li>
+        <li>Gestion sécurisée des comptes patients et médecins</li>
+        <li>Création et gestion d'enquêtes de santé publique</li>
+        <li>Outils d'analyse avancée pour des insights précis</li>
+    </ul>
+</section>
 
+<section id="contact">
+    <h2>Contactez-Nous</h2>
+    <p>Pour toute question ou assistance, n'hésitez pas à <a href="mailto:support@medianalytix.fr">nous contacter</a>.</p>
+</section>
+{% endblock %}

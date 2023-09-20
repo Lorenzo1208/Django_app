@@ -1,26 +1,13 @@
 from django.http import HttpResponse
-from django.shortcuts import render
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
-from .forms import InscriptionForm
-from django.contrib.auth import login as auth_login
+from django.contrib.auth import authenticate, login, logout
+from .forms import InscriptionForm, StressEvaluationForm, PatientForm, TestForm, StressEvaluationForm as StressEvaluationFormForm
 from django.contrib import messages
-from django.shortcuts import render, redirect
-from .forms import StressEvaluationForm
-from django.contrib.auth import logout
-from django.shortcuts import redirect
-from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic.edit import FormView
-from .forms import PatientForm  # Adjust the import path based on your project structure
-from .models import PatientDailyForm  # Import your model here
-from django.shortcuts import render, redirect
-from .models import TestModel  # Importez le modèle TestModel
-from django.shortcuts import render, redirect
-from .forms import TestForm
+from .models import PatientDailyForm, TestModel, StressEvaluationForm as StressEvaluationFormModel
 from django.db import transaction
-from django.contrib.auth.decorators import login_required 
-from .models import StressEvaluationForm
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     return render(request, 'home.html')
@@ -81,9 +68,6 @@ class PatientFormView(FormView):
 
         return super().form_valid(form)
 
-from .forms import StressEvaluationForm as StressEvaluationFormForm
-from .models import StressEvaluationForm as StressEvaluationFormModel
-
 def evaluate_stress(request):
     if request.method == 'POST':
         form = StressEvaluationFormForm(request.POST)
@@ -102,7 +86,6 @@ def evaluate_stress(request):
         form = StressEvaluationFormForm()
 
     return render(request, 'form_template.html', {'form': form})
-
 
 @login_required  
 def test_form_view(request):

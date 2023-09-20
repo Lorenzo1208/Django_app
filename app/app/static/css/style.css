@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  padding-right: 20px; /* Décale le contenu du body vers la droite */
+}
+h1 {
+  text-align: center;
+}
+nav {
+  width: 100%; /* S'assure que la nav bar prend toute la largeur */
+  padding-right: 20px; /* Annule le padding-right du body */
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+}
+nav ul li {
+  float: left;
+}
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  background-color: #111;
+}
+.user-auth {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+main {
+  padding: 15px;
+}

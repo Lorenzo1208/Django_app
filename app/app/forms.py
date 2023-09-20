@@ -1,11 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm
-from .models import User
+from .models import User, PatientDailyForm, StressEvaluationForm as StressEvaluationModel
 from django import forms
 from datetime import datetime, timedelta
-from django import forms
-from .models import PatientDailyForm  # Assurez-vous d'ajuster l'importation en fonction de la structure de votre projet
-from django import forms
-from .models import StressEvaluationForm
 
 class InscriptionForm(UserCreationForm):
     class Meta:
@@ -17,8 +13,6 @@ class PatientForm(forms.ModelForm):
         model = PatientDailyForm
         fields = '__all__'
         exclude = ['user', 'date']  # Nous excluons user et date car ils seront gérés séparément
-
-from .models import StressEvaluationForm as StressEvaluationModel
 
 class StressEvaluationForm(forms.Form):
     CHOICES = [

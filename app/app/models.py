@@ -1,13 +1,8 @@
-from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, User
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
-from django.contrib.auth.models import User
-from datetime import datetime
-from django.conf import settings
-from django.db import models
-from django.contrib.auth.models import User
 from datetime import datetime, timedelta
+from django.conf import settings
 
 class User(AbstractUser):
     USER_TYPE_CHOICES = (
@@ -189,10 +184,6 @@ class StressEvaluationForm(models.Model):
 for symptom in StressEvaluationForm.SYMPTOMS:
     field = models.IntegerField(choices=StressEvaluationForm.CHOICES, verbose_name=symptom)
     setattr(StressEvaluationForm, symptom, field)
-
-from django.db import models
-from django.conf import settings
-from django.contrib.auth import get_user_model
 
 class TestModel(models.Model):
     user = models.ForeignKey(
