@@ -31,5 +31,6 @@ urlpatterns = [
     path('stress_from/', views.evaluate_stress, name='evaluate_stress'),
     path('success/', views.success_view, name='success'),  # Remplacez views.success_view par la vue que vous souhaitez afficher après la soumission du formulaire
     path('deconnexion/', views.deconnexion_view, name='deconnexion'),
-
+    path('doctor_dashboard/', views.doctor_dashboard, name='doctor_dashboard'),
+    path('patient_dashboard/', views.patient_dashboard, name='patient_dashboard'),
 ]

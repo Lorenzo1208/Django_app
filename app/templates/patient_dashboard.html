@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Tableau de bord du patient</h1>
+    <h2>Mes médecins:</h2>
+    <ul>
+        {% for doctor in doctors %}
+            <li>{{ doctor.user.username }} - {{ doctor.user.email }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

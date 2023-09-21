@@ -24,8 +24,3 @@ class StressEvaluationForm(forms.Form):
 
     for symptom in StressEvaluationModel.SYMPTOMS:
         locals()[symptom] = forms.ChoiceField(choices=CHOICES, widget=forms.RadioSelect, label=symptom.replace('_', ' '))
-
-
-class TestForm(forms.Form):
-    name = forms.CharField(label="Name", max_length=100)
-    email = forms.EmailField(label="Email")

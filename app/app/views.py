@@ -1,11 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from .forms import InscriptionForm, StressEvaluationForm, PatientForm, TestForm, StressEvaluationForm as StressEvaluationFormForm
+from .forms import InscriptionForm, StressEvaluationForm, PatientForm, StressEvaluationForm as StressEvaluationFormForm
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.views.generic.edit import FormView
-from .models import PatientDailyForm, TestModel, StressEvaluationForm as StressEvaluationFormModel
+from .models import PatientDailyForm, StressEvaluationForm as StressEvaluationFormModel
+from .models import DoctorProfile, PatientProfile
 from django.db import transaction
 from django.contrib.auth.decorators import login_required
 
@@ -87,23 +88,19 @@ def evaluate_stress(request):
 
     return render(request, 'form_template.html', {'form': form})
 
-@login_required  
-def test_form_view(request):
-    if request.method == 'POST':
-        form = TestForm(request.POST)
-        if form.is_valid():
-            user = request.user
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-
-            with transaction.atomic():
-                TestModel.objects.create(name=name, email=email, user=user)
-
-            return redirect('success')
-    else:
-        form = TestForm()
-
-    return render(request, 'test_form_template.html', {'form': form})
-
 def success_view(request):
     return render(request, 'success_template.html') 
+
+@login_required
+def doctor_dashboard(request):
+    doctor_profile = DoctorProfile.objects.get(user=request.user)
+    patients = doctor_profile.patients.all()
+    context = {'patients': patients}
+    return render(request, 'doctor_dashboard.html', context)
+
+@login_required
+def patient_dashboard(request):
+    patient_profile = PatientProfile.objects.get(user=request.user)
+    doctors = patient_profile.doctors.all()
+    context = {'doctors': doctors}
+    return render(request, 'patient_dashboard.html', context)

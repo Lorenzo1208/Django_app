@@ -4,53 +4,31 @@ from django.db import models
 from datetime import datetime, timedelta
 from django.conf import settings
 
+# Custom User model
 class User(AbstractUser):
     USER_TYPE_CHOICES = (
         ('DOCTOR', 'Médecin'),
         ('PATIENT', 'Patient'),
     )
+    user_type = models.CharField(max_length=7, choices=USER_TYPE_CHOICES, default='PATIENT')
+    is_staff = models.BooleanField(default=False)
 
-    user_type = models.CharField(max_length=7, choices=USER_TYPE_CHOICES, default='PATIENT') # Augmenté à 7
-    email = models.EmailField(unique=True, blank=False)
-    first_name = models.CharField(max_length=30, blank=False)
-    last_name = models.CharField(max_length=30, blank=False)
-
-    groups = models.ManyToManyField(
-        'auth.Group', 
-        blank=True, 
-        related_name="custom_user_groups", 
-        help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.',
-        verbose_name='groups'
-    )
-    
-    user_permissions = models.ManyToManyField(
-        'auth.Permission',
-        blank=True,
-        related_name="custom_user_permissions",
-        help_text='Specific permissions for this user.',
-        verbose_name='user permissions'
-    )
-
+# Patient Profile
 class PatientProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='patient_profile')
     date_of_birth = models.DateField(null=True, blank=True)
     address = models.TextField(null=True, blank=True)
     phone_number = models.CharField(max_length=15, null=True, blank=True)
-    # autres champs spécifiques au profil du patient
 
+# Doctor Profile
 class DoctorProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='doctor_profile')
     medical_license_number = models.CharField(max_length=100, null=True, blank=True)
     specialty = models.CharField(max_length=100, null=True, blank=True)
-    # autres champs spécifiques au profil du médecin
-
-class AdminProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='admin_profile')
-    # autres champs spécifiques au profil de l'administrateur
+    patients = models.ManyToManyField('PatientProfile', related_name='doctors', blank=True)
 
 class DataAnalysis(models.Model):
-    doctor = models.ForeignKey(DoctorProfile, on_delete=models.CASCADE, related_name='data_analyses')
-    analysis_type = models.CharField(max_length=100)
+    doctor = models.ForeignKey('DoctorProfile', on_delete=models.CASCADE, related_name='data_analyses')  # Pointe vers 'DoctorProfile'    analysis_type = models.CharField(max_length=100)
     date_conducted = models.DateTimeField(auto_now_add=True)
     results = models.TextField()
     # autres champs pour stocker les résultats des analyses de données
@@ -186,16 +164,3 @@ class StressEvaluationForm(models.Model):
 for symptom in StressEvaluationForm.SYMPTOMS:
     field = models.IntegerField(choices=StressEvaluationForm.CHOICES, verbose_name=symptom)
     setattr(StressEvaluationForm, symptom, field)
-
-class TestModel(models.Model):
-    user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        null=True,  # Permettre la valeur nulle (null)
-)
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-
-    def __str__(self):
-        return self.name
-
