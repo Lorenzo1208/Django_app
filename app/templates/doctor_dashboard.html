@@ -4,8 +4,12 @@
     <h1>Tableau de bord du médecin</h1>
     <h2>Liste des patients:</h2>
     <ul>
-        {% for patient in patients %}
-            <li>{{ patient.user.username }} - {{ patient.user.email }}</li>
+        {% for user, form_counts in form_counts_per_patient %}
+            <li>
+                {{ user.username }} - {{ user.email }}
+                - Formulaires d'évaluation du stress soumis : {{ form_counts.stress_form_count }}
+                - Formulaires quotidiens soumis : {{ form_counts.daily_form_count }}
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}

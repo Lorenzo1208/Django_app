@@ -55,8 +55,20 @@
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Accueil</a></li>
-                <li><a href="{% url 'patient_form' %}">Formulaire Quotidien</a></li>
-                <li><a href="{% url 'evaluate_stress' %}">Formulaire Stress</a></li>
+                {% if not is_doctor %}
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'patient_form' %}">Formulaire Quotidien</a></li>
+                    <li><a href="{% url 'evaluate_stress' %}">Formulaire Stress</a></li>
+                {% endif %}
+            {% endif %}
+                {% if user.is_authenticated %}
+                {% if is_doctor %}
+                    <li><a href="{% url 'doctor_dashboard' %}">Tableau de bord du médecin</a></li>
+                {% else %}
+                    <li><a href="{% url 'patient_dashboard' %}">Tableau de bord du patient</a></li>
+                {% endif %}
+            {% endif %}
+
                 {% if not user.is_authenticated %}
                     <li class="user-auth">
                         <a href="{% url 'connexion' %}">Connexion</a>

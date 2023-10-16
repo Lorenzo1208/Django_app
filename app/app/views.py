@@ -10,6 +10,22 @@ from .models import DoctorProfile, PatientProfile
 from django.db import transaction
 from django.contrib.auth.decorators import login_required
 
+from django.contrib.auth import get_user_model
+from django.db.models import Count
+from django.utils import timezone
+from datetime import timedelta
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
+from django.views.generic.edit import FormView
+from django.db.models import Count, F
+from django.utils import timezone
+from datetime import timedelta
+from app.models import DoctorProfile, PatientDailyForm, StressEvaluationForm
+from django.shortcuts import get_object_or_404
+
+
 def home(request):
     return render(request, 'home.html')
 
@@ -93,14 +109,37 @@ def success_view(request):
 
 @login_required
 def doctor_dashboard(request):
-    doctor_profile = DoctorProfile.objects.get(user=request.user)
+    doctor_profile = get_object_or_404(DoctorProfile, user=request.user)
     patients = doctor_profile.patients.all()
-    context = {'patients': patients}
+
+    # Récupérer les types de formulaires et le nombre de soumissions pour chaque patient
+    form_counts_per_patient = []
+    for patient in patients:
+        user = patient.user
+        # Compter les formulaires de StressEvaluationForm
+        stress_form_count = StressEvaluationForm.objects.filter(user=user).count()
+        # Compter les formulaires de PatientDailyForm
+        daily_form_count = PatientDailyForm.objects.filter(user=user).count()
+
+        form_counts_per_patient.append((user, {
+            'stress_form_count': stress_form_count,
+            'daily_form_count': daily_form_count,
+        }))
+
+    context = {
+        'form_counts_per_patient': form_counts_per_patient,
+        'is_doctor': True,  # Ajouter cette ligne
+    }
+
     return render(request, 'doctor_dashboard.html', context)
+
 
 @login_required
 def patient_dashboard(request):
-    patient_profile = PatientProfile.objects.get(user=request.user)
+    patient_profile = get_object_or_404(PatientProfile, user=request.user)
     doctors = patient_profile.doctors.all()
-    context = {'doctors': doctors}
+    context = {
+        'doctors': doctors,
+        'is_doctor': False,  # Ajouter cette ligne
+    }
     return render(request, 'patient_dashboard.html', context)

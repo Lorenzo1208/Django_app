@@ -85,13 +85,13 @@ class PatientDailyForm(models.Model):
     duree_malaises = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(300)], null=True)
 
     def save(self, *args, **kwargs):
-        if not PatientDailyForm.objects.filter(user=self.user, date=datetime.now().date()).exists():
+        if not PatientDailyForm.objects.filter(user=self.user, date__gte=datetime.now().date() - timedelta(days=14)).exists():
             if self.user.user_type == 'PATIENT':
                 super().save(*args, **kwargs)
             else:
                 raise ValueError("Seuls les patients peuvent soumettre ce formulaire")
         else:
-            raise ValueError("Vous ne pouvez soumettre ce formulaire qu'une fois par jour")
+            raise ValueError("Vous ne pouvez soumettre ce formulaire qu'une fois toutes les deux semaines")
 
 class StressEvaluationForm(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -156,10 +156,10 @@ class StressEvaluationForm(models.Model):
     total_impact_du_stress_dans_votre_vie_actuelle = models.IntegerField(default=0, blank=True)
 
     def save(self, *args, **kwargs):
-        if not StressEvaluationForm.objects.filter(user=self.user, date__gte=datetime.now().date() - timedelta(days=14)).exists():
+        if not StressEvaluationForm.objects.filter(user=self.user, date=datetime.now().date()).exists():
             super().save(*args, **kwargs)
         else:
-            raise ValueError("Vous ne pouvez soumettre ce formulaire qu'une fois toutes les deux semaines")
+            raise ValueError("Vous ne pouvez soumettre ce formulaire qu'une fois par jour")
 
 for symptom in StressEvaluationForm.SYMPTOMS:
     field = models.IntegerField(choices=StressEvaluationForm.CHOICES, verbose_name=symptom)
