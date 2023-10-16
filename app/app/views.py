@@ -112,23 +112,33 @@ def doctor_dashboard(request):
     doctor_profile = get_object_or_404(DoctorProfile, user=request.user)
     patients = doctor_profile.patients.all()
 
-    # Récupérer les types de formulaires et le nombre de soumissions pour chaque patient
-    form_counts_per_patient = []
-    for patient in patients:
-        user = patient.user
-        # Compter les formulaires de StressEvaluationForm
-        stress_form_count = StressEvaluationForm.objects.filter(user=user).count()
-        # Compter les formulaires de PatientDailyForm
-        daily_form_count = PatientDailyForm.objects.filter(user=user).count()
+    # Créer des tuples avec les données nécessaires pour chaque patient
+    data_per_patient = [
+        (
+            patient.user,
+            sum(StressEvaluationForm.objects.filter(user=patient.user).values_list('score', flat=True)),
+            sum(PatientDailyForm.objects.filter(user=patient.user).values_list('frequence_cardiaque', flat=True))
+        )
+        for patient in patients
+    ]
 
-        form_counts_per_patient.append((user, {
-            'stress_form_count': stress_form_count,
-            'daily_form_count': daily_form_count,
-        }))
+    # Trier les données en fonction du score de stress et de la fréquence cardiaque
+    stress_sorted_data = sorted(data_per_patient, key=lambda x: x[1], reverse=True)
+    heart_rate_sorted_data = sorted(data_per_patient, key=lambda x: x[2], reverse=True)
+
+    # Extraire les labels et les données pour les graphiques
+    stress_labels = [item[0].username for item in stress_sorted_data]
+    stress_scores = [item[1] for item in stress_sorted_data]
+    heart_rate_labels = [item[0].username for item in heart_rate_sorted_data]
+    heart_rates = [item[2] for item in heart_rate_sorted_data]
 
     context = {
-        'form_counts_per_patient': form_counts_per_patient,
-        'is_doctor': True,  # Ajouter cette ligne
+        'form_counts_per_patient': data_per_patient,  # Si vous en avez encore besoin pour d'autres parties de la vue
+        'is_doctor': True,
+        'stress_labels': stress_labels,
+        'stress_scores': stress_scores,
+        'heart_rate_labels': heart_rate_labels,
+        'heart_rates': heart_rates,
     }
 
     return render(request, 'doctor_dashboard.html', context)

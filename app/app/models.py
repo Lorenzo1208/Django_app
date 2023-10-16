@@ -84,14 +84,29 @@ class PatientDailyForm(models.Model):
     heure_debut_malaises = models.TimeField(null=True)
     duree_malaises = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(300)], null=True)
 
+    # def save(self, *args, **kwargs):
+    #     if not PatientDailyForm.objects.filter(user=self.user, date__gte=datetime.now().date() - timedelta(days=14)).exists():
+    #         if self.user.user_type == 'PATIENT':
+    #             super().save(*args, **kwargs)
+    #         else:
+    #             raise ValueError("Seuls les patients peuvent soumettre ce formulaire")
+    #     else:
+    #         raise ValueError("Vous ne pouvez soumettre ce formulaire qu'une fois toutes les deux semaines")
+    
     def save(self, *args, **kwargs):
-        if not PatientDailyForm.objects.filter(user=self.user, date__gte=datetime.now().date() - timedelta(days=14)).exists():
+        if not PatientDailyForm.objects.filter(user=self.user, date=datetime.now().date()).exists():
             if self.user.user_type == 'PATIENT':
                 super().save(*args, **kwargs)
             else:
                 raise ValueError("Seuls les patients peuvent soumettre ce formulaire")
         else:
             raise ValueError("Vous ne pouvez soumettre ce formulaire qu'une fois toutes les deux semaines")
+
+        #         def save(self, *args, **kwargs):
+        # if not StressEvaluationForm.objects.filter(user=self.user, date=datetime.now().date()).exists():
+        #     super().save(*args, **kwargs)
+        # else:
+        #     raise ValueError("Vous ne pouvez soumettre ce formulaire qu'une fois par jour")
 
 class StressEvaluationForm(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -4,12 +4,72 @@
     <h1>Tableau de bord du médecin</h1>
     <h2>Liste des patients:</h2>
     <ul>
-        {% for user, form_counts in form_counts_per_patient %}
+        {% for user, stress_score, heart_rate in form_counts_per_patient %}
             <li>
                 {{ user.username }} - {{ user.email }}
-                - Formulaires d'évaluation du stress soumis : {{ form_counts.stress_form_count }}
-                - Formulaires quotidiens soumis : {{ form_counts.daily_form_count }}
             </li>
         {% endfor %}
     </ul>
+
+    <!-- Inclure Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.js"></script>
+
+    <!-- Conteneur flex pour les graphiques -->
+<div class="flex">
+    <!-- Div pour le graphique du score de stress -->
+    <div class="w-1/2 p-4">
+        <canvas id="stressChart"></canvas>
+        <script>
+            var ctx = document.getElementById('stressChart').getContext('2d');
+            var stressChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: {{ stress_labels|safe }},
+                    datasets: [{
+                        label: 'Score de stress',
+                        data: {{ stress_scores|safe }},
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+
+    <!-- Div pour le graphique de la fréquence cardiaque -->
+    <div class="w-1/2 p-4">
+        <canvas id="heartRateChart"></canvas>
+        <script>
+            var ctx2 = document.getElementById('heartRateChart').getContext('2d');
+            var heartRateChart = new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: {{ heart_rate_labels|safe }},
+                    datasets: [{
+                        label: 'Fréquence cardiaque',
+                        data: {{ heart_rates|safe }},
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+</div>
 {% endblock %}

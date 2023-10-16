@@ -1,23 +1,17 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <section id="presentation">
-    <h2>Bienvenue sur MediAnalytix</h2>
+    <h2 class="text-3xl">Bienvenue sur MediAnalytix</h2>
     <p>Nous facilitons la conduite d'enquêtes de santé publique en connectant les professionnels de la santé et les patients de manière sécurisée et efficace.</p>
 </section>
-
-<section id="features">
-    <h2>Fonctionnalités Principales</h2>
-    <ul>
-        <li>Analyse des données de santé en temps réel</li>
-        <li>Gestion sécurisée des comptes patients et médecins</li>
-        <li>Création et gestion d'enquêtes de santé publique</li>
-        <li>Outils d'analyse avancée pour des insights précis</li>
-    </ul>
-</section>
-
+<br>
+<div class="center">
+    <img src="{% static 'OIG.jpeg' %}" width="10%">
+</div>
 <section id="contact">
-    <h2>Contactez-Nous</h2>
-    <p>Pour toute question ou assistance, n'hésitez pas à <a href="mailto:support@medianalytix.fr">nous contacter</a>.</p>
+    <h2 class="text-3xl">Contactez-Nous</h2>
+    <p>Pour toute question ou assistance, n'hésitez pas à contacter support@medianalytix.fr</a>.</p>
 </section>
 {% endblock %}
