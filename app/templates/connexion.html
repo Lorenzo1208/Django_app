@@ -53,7 +53,8 @@
   
   <label for="password">Mot de passe:</label>
   <input id="password" type="password" name="password" placeholder="Mot de passe" required>
-  
+  <a href="{% url 'password_reset' %}">Mot de passe oublié?</a>
+
   {% if messages %}
     <div class="messages">
       {% for message in messages %}
