@@ -1,75 +1,118 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Tableau de bord du médecin</h1>
-    <h2>Liste des patients:</h2>
-    <ul>
-        {% for user, stress_score, heart_rate in form_counts_per_patient %}
-            <li>
-                {{ user.username }} - {{ user.email }}
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-semibold text-gray-800 mb-4">Tableau de bord du médecin</h1>
+        <h2 class="text-2xl text-gray-700 mb-3">Liste des patients:</h2>
 
+        <div class="bg-white shadow-md rounded-lg p-4">
+            <ul class="list-disc list-inside">
+                {% for user, stress_score, heart_rate in form_counts_per_patient %}
+                    <li class="border-b border-gray-200 py-2">
+                        <span class="font-medium text-gray-700">{{ user.username }}</span> - 
+                        <span class="text-gray-600">{{ user.email }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
     <!-- Inclure Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.js"></script>
 
-    <!-- Conteneur flex pour les graphiques -->
-<div class="flex">
-    <!-- Div pour le graphique du score de stress -->
-    <div class="w-1/2 p-4">
-        <canvas id="stressChart"></canvas>
-        <script>
-            var ctx = document.getElementById('stressChart').getContext('2d');
-            var stressChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: {{ stress_labels|safe }},
-                    datasets: [{
-                        label: 'Score de stress',
-                        data: {{ stress_scores|safe }},
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-        </script>
-    </div>
+    <!-- Conteneur principal flex pour les graphiques -->
+    <div class="flex flex-wrap justify-between">
 
-    <!-- Div pour le graphique de la fréquence cardiaque -->
-    <div class="w-1/2 p-4">
-        <canvas id="heartRateChart"></canvas>
-        <script>
-            var ctx2 = document.getElementById('heartRateChart').getContext('2d');
-            var heartRateChart = new Chart(ctx2, {
-                type: 'bar',
-                data: {
-                    labels: {{ heart_rate_labels|safe }},
-                    datasets: [{
-                        label: 'Fréquence cardiaque',
-                        data: {{ heart_rates|safe }},
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
+        <!-- Div pour le graphique du score de stress (à gauche) -->
+        <div class="w-1/2 p-4">
+            <canvas id="stressChart"></canvas>
+            <script>
+                var ctx = document.getElementById('stressChart').getContext('2d');
+                var stressChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: {{ stress_labels|safe }},
+                        datasets: [{
+                            label: 'Score de stress',
+                            data: {{ stress_scores|safe }},
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
                         }
                     }
-                }
-            });
-        </script>
+                });
+            </script>
+        </div>
+
+        <!-- Div pour le graphique de prédiction du score de stress (à droite) -->
+        <div class="w-1/2 p-4">
+            <canvas id="predictedStressChart"></canvas>
+            <script>
+                var ctx3 = document.getElementById('predictedStressChart').getContext('2d');
+                var predictedStressChart = new Chart(ctx3, {
+                    type: 'bar',
+                    data: {
+                        labels: {{ stress_labels|safe }},
+                        datasets: [
+                            {
+                                label: 'Score actuel de stress',
+                                data: {{ stress_scores|safe }},
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                borderColor: 'rgba(75, 192, 192, 1)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Score prévu de stress',
+                                data: {{ predicted_stress_scores|safe }},
+                                backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                                borderColor: 'rgba(153, 102, 255, 1)',
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+        </div>
+
+        <!-- Div pour le graphique de la fréquence cardiaque (centré en dessous) -->
+        <div class="w-full flex justify-center p-4">
+            <div class="w-1/2">
+            <canvas id="heartRateChart"></canvas>
+            <script>
+                var ctx2 = document.getElementById('heartRateChart').getContext('2d');
+                var heartRateChart = new Chart(ctx2, {
+                    type: 'bar',
+                    data: {
+                        labels: {{ heart_rate_labels|safe }},
+                        datasets: [{
+                            label: 'Fréquence cardiaque',
+                            data: {{ heart_rates|safe }},
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+        </div>
+
     </div>
-</div>
 {% endblock %}

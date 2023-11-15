@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediAnalytix</title>
-    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         /* CSS personnalisé pour l'animation de survol */
@@ -15,7 +16,9 @@
         nav ul li a:hover {
             transform: scale(1.05);
         }
-        
+
+
+
     </style>
 </head>
 <body class="bg-gray-100">
@@ -57,5 +60,7 @@
     <main class="container mx-auto p-4">
         {% block content %}{% endblock %}
     </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </body>
 </html>

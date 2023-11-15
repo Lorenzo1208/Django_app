@@ -2,16 +2,43 @@
 {% load static %}
 
 {% block content %}
-<section id="presentation">
-    <h2 class="text-3xl">Bienvenue sur MediAnalytix</h2>
+<section id="presentation" style="text-align: center; margin-top: 20px;">
+    <h2 class="text-3xl font-bold">Bienvenue sur MediAnalytix</h2>
     <p>Nous facilitons la conduite d'enquêtes de santé publique en connectant les professionnels de la santé et les patients de manière sécurisée et efficace.</p>
 </section>
-<br>
-<div class="center">
-    <img src="{% static 'OIG.jpeg' %}" width="10%">
+
+<div class="center" style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+    <img id="dynamicImage" src="{% static 'patient.jpg' %}" style="max-width: 50%; height: auto; border-radius: 10px;">
+    <!-- Éléments cachés pour stocker les chemins d'images -->
+    <div id="imagePaths">
+        <span id="image1" data-path="{% static 'patient.jpg' %}"></span>
+        <span id="image2" data-path="https://s1.qwant.com/thumbr/0x380/0/7/52cb7aa104341aaa284680f67e258d4a83e0cdf6a7d90c2f391d8a06d550a2/2017-05-31-10-21-33.jpg?u=https%3A%2F%2Fpixnio.com%2Ffree-images%2F2017%2F05%2F31%2F2017-05-31-10-21-33.jpg&q=0&b=1&p=0&a=0"></span>
+        <span id="image3" data-path="{% static 'h.jpg' %}"></span>
+        <span id="image4" data-path="https://s1.qwant.com/thumbr/0x0/1/d/3c96b075528cfd5c65af2cec65e14f6d51fc8fb9b27b3d7a8d9b22bd95f06c/tombstone-with-rip-picture-id172904419.jpg?u=https%3A%2F%2Fmedia.istockphoto.com%2Fphotos%2Ftombstone-with-rip-picture-id172904419%3Fk%3D6%26m%3D172904419%26s%3D170667a%26w%3D0%26h%3DE_A-JWlsMD3KBiPnpX62Gn9K8W-e-0GQYtStqvtfqkE%3D&q=0&b=1&p=0&a=0"style="width: 30%;"></span>
+        <span id="image5" data-path="https://s2.qwant.com/thumbr/474x474/f/3/7b9cd4bc25f9f30c7ef0bf04aa7182ccbdaebc82bb6f24ee7bdb0a1eecd365/th.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%3Fid%3DOIP.nNiISXByePw1PyPiwOCfOgHaHa%26pid%3DApi&q=0&b=1&p=0&a=0"style="width: 30%;"></span>
+    </div>
 </div>
-<section id="contact">
-    <h2 class="text-3xl">Contactez-Nous</h2>
-    <p>Pour toute question ou assistance, n'hésitez pas à contacter support@medianalytix.fr</a>.</p>
+
+<section id="contact" style="text-align: center; margin-top: 20px;">
+    <h2 class="text-3xl font-bold">Contactez-Nous</h2>
+    <p style="font-size: 1.2rem;">Pour toute question ou assistance, n'hésitez pas à contacter support@medianalytix.fr</p>
 </section>
+
+<script>
+// Script JavaScript pour changer l'image toutes les deux secondes
+let currentIndex = 0;
+const images = [
+    document.getElementById('image1').getAttribute('data-path'),
+    document.getElementById('image2').getAttribute('data-path'),
+    document.getElementById('image3').getAttribute('data-path'),
+    document.getElementById('image4').getAttribute('data-path'),
+    document.getElementById('image5').getAttribute('data-path')
+];
+
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById('dynamicImage').src = images[currentIndex];
+}, 2500); // 2500 millisecondes = 2.5 secondes
+</script>
+
 {% endblock %}

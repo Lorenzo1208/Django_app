@@ -179,3 +179,4 @@ class StressEvaluationForm(models.Model):
 for symptom in StressEvaluationForm.SYMPTOMS:
     field = models.IntegerField(choices=StressEvaluationForm.CHOICES, verbose_name=symptom)
     setattr(StressEvaluationForm, symptom, field)
+

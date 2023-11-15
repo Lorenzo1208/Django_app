@@ -107,6 +107,7 @@ def evaluate_stress(request):
 def success_view(request):
     return render(request, 'success_template.html') 
 
+import random 
 @login_required
 def doctor_dashboard(request):
     doctor_profile = get_object_or_404(DoctorProfile, user=request.user)
@@ -132,16 +133,21 @@ def doctor_dashboard(request):
     heart_rate_labels = [item[0].username for item in heart_rate_sorted_data]
     heart_rates = [item[2] for item in heart_rate_sorted_data]
 
+    # Générer des scores prévus fictifs
+    predicted_stress_scores = [score + random.randint(1, 5) for score in stress_scores]
+
     context = {
-        'form_counts_per_patient': data_per_patient,  # Si vous en avez encore besoin pour d'autres parties de la vue
+        'form_counts_per_patient': data_per_patient,
         'is_doctor': True,
         'stress_labels': stress_labels,
         'stress_scores': stress_scores,
         'heart_rate_labels': heart_rate_labels,
         'heart_rates': heart_rates,
+        'predicted_stress_scores': predicted_stress_scores,
     }
 
     return render(request, 'doctor_dashboard.html', context)
+
 
 
 @login_required
@@ -153,3 +159,4 @@ def patient_dashboard(request):
         'is_doctor': False,  # Ajouter cette ligne
     }
     return render(request, 'patient_dashboard.html', context)
+
