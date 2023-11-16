@@ -1,7 +1,7 @@
 
-# DoctoLib - Application Web pour Médecins
+# MédiAnalytix - Application Web pour Médecins
 
-DoctoLib est une application Web Django développée pour permettre aux professionnels de santé de mener des enquêtes de santé publique et de gérer leurs patients. L'application offre des fonctionnalités pour les administrateurs, médecins et patients, avec une emphase sur la sécurité et la confidentialité des données.
+MédiAnalytix est une application Web Django développée pour permettre aux professionnels de santé de mener des enquêtes de santé publique et de gérer leurs patients. L'application offre des fonctionnalités pour les administrateurs, médecins et patients, avec une emphase sur la sécurité et la confidentialité des données.
 
 ## Prérequis
 
