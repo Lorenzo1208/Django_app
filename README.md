@@ -13,8 +13,7 @@ MédiAnalytix est une application Web Django développée pour permettre aux pro
 
 1. **Clonez le dépôt :**
    ```bash
-   git clone [URL_DU_DÉPÔT]
-   cd doctolib
+   git clone https://github.com/Lorenzo1208/Django_app.git
    ```
 
 2. **Configurez un environnement virtuel :**
