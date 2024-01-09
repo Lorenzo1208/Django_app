@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/e8fda1df931e470292921ba5dffd61f2/artifacts
+end_time: 1704792042633
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e8fda1df931e470292921ba5dffd61f2
+run_name: defiant-horse-559
+run_uuid: e8fda1df931e470292921ba5dffd61f2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792042537
+status: 3
+tags: []
+user_id: loren

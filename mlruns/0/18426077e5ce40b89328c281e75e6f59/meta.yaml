@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/18426077e5ce40b89328c281e75e6f59/artifacts
+end_time: 1704792040059
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 18426077e5ce40b89328c281e75e6f59
+run_name: colorful-hare-825
+run_uuid: 18426077e5ce40b89328c281e75e6f59
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792039864
+status: 3
+tags: []
+user_id: loren

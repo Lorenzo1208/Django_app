@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/36b2146e0f9b4cad9b5212d0cb41c2ce/artifacts
+end_time: 1704793580610
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 36b2146e0f9b4cad9b5212d0cb41c2ce
+run_name: brawny-elk-325
+run_uuid: 36b2146e0f9b4cad9b5212d0cb41c2ce
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793580438
+status: 3
+tags: []
+user_id: loren

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/51a6c563e3a74c6cb990b2abc68c9c25/artifacts
+end_time: 1704792095501
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 51a6c563e3a74c6cb990b2abc68c9c25
+run_name: thoughtful-sloth-491
+run_uuid: 51a6c563e3a74c6cb990b2abc68c9c25
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792095413
+status: 3
+tags: []
+user_id: loren

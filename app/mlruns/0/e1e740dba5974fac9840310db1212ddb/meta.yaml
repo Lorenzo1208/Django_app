@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/e1e740dba5974fac9840310db1212ddb/artifacts
+end_time: 1704792938713
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e1e740dba5974fac9840310db1212ddb
+run_name: dazzling-penguin-768
+run_uuid: e1e740dba5974fac9840310db1212ddb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792938565
+status: 3
+tags: []
+user_id: loren

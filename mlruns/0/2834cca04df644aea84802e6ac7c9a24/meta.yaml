@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/2834cca04df644aea84802e6ac7c9a24/artifacts
+end_time: 1704792344380
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2834cca04df644aea84802e6ac7c9a24
+run_name: invincible-rook-28
+run_uuid: 2834cca04df644aea84802e6ac7c9a24
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792344306
+status: 3
+tags: []
+user_id: loren

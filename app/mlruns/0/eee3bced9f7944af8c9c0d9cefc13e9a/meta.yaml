@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/eee3bced9f7944af8c9c0d9cefc13e9a/artifacts
+end_time: 1704792917807
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eee3bced9f7944af8c9c0d9cefc13e9a
+run_name: bright-hen-855
+run_uuid: eee3bced9f7944af8c9c0d9cefc13e9a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792917652
+status: 3
+tags: []
+user_id: loren

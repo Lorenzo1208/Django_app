@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/0d7b34cb31a3427180cd740d69d3727f/artifacts
+end_time: 1704793021572
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0d7b34cb31a3427180cd740d69d3727f
+run_name: gifted-hen-212
+run_uuid: 0d7b34cb31a3427180cd740d69d3727f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793021267
+status: 3
+tags: []
+user_id: loren

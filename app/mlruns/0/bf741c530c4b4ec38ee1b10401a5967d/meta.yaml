@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/bf741c530c4b4ec38ee1b10401a5967d/artifacts
+end_time: 1704793965159
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bf741c530c4b4ec38ee1b10401a5967d
+run_name: nosy-kite-199
+run_uuid: bf741c530c4b4ec38ee1b10401a5967d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793964914
+status: 3
+tags: []
+user_id: loren

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/1560081a3f1341cf958592f22ebe791e/artifacts
+end_time: 1704793037481
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1560081a3f1341cf958592f22ebe791e
+run_name: welcoming-lamb-478
+run_uuid: 1560081a3f1341cf958592f22ebe791e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793037299
+status: 3
+tags: []
+user_id: loren

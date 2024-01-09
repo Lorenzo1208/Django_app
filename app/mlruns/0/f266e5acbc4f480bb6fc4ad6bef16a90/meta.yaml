@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/f266e5acbc4f480bb6fc4ad6bef16a90/artifacts
+end_time: 1704792993756
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f266e5acbc4f480bb6fc4ad6bef16a90
+run_name: powerful-yak-231
+run_uuid: f266e5acbc4f480bb6fc4ad6bef16a90
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792993366
+status: 3
+tags: []
+user_id: loren

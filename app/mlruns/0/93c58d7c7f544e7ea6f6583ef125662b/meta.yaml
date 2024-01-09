@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/93c58d7c7f544e7ea6f6583ef125662b/artifacts
+end_time: 1704793578303
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 93c58d7c7f544e7ea6f6583ef125662b
+run_name: wise-whale-87
+run_uuid: 93c58d7c7f544e7ea6f6583ef125662b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793578158
+status: 3
+tags: []
+user_id: loren

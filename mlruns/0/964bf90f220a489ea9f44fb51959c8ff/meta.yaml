@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/964bf90f220a489ea9f44fb51959c8ff/artifacts
+end_time: 1704792068612
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 964bf90f220a489ea9f44fb51959c8ff
+run_name: wistful-seal-983
+run_uuid: 964bf90f220a489ea9f44fb51959c8ff
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792068458
+status: 3
+tags: []
+user_id: loren

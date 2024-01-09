@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/c575b71a4b9f465b8212425da37c07a0/artifacts
+end_time: 1704793023898
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c575b71a4b9f465b8212425da37c07a0
+run_name: redolent-crane-793
+run_uuid: c575b71a4b9f465b8212425da37c07a0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793023670
+status: 3
+tags: []
+user_id: loren

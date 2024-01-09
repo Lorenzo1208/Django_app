@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/72765d8168ec44119bd29e7c4f11103a/artifacts
+end_time: 1704792908541
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 72765d8168ec44119bd29e7c4f11103a
+run_name: luminous-bee-261
+run_uuid: 72765d8168ec44119bd29e7c4f11103a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792908275
+status: 3
+tags: []
+user_id: loren

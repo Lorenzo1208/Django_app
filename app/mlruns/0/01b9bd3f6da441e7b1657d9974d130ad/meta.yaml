@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/01b9bd3f6da441e7b1657d9974d130ad/artifacts
+end_time: 1704793032839
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 01b9bd3f6da441e7b1657d9974d130ad
+run_name: bittersweet-bug-74
+run_uuid: 01b9bd3f6da441e7b1657d9974d130ad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793032683
+status: 3
+tags: []
+user_id: loren

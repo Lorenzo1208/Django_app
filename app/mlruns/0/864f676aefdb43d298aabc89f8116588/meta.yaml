@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/864f676aefdb43d298aabc89f8116588/artifacts
+end_time: 1704792973071
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 864f676aefdb43d298aabc89f8116588
+run_name: smiling-dolphin-900
+run_uuid: 864f676aefdb43d298aabc89f8116588
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792972941
+status: 3
+tags: []
+user_id: loren

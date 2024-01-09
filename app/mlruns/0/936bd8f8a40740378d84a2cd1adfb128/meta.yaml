@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/936bd8f8a40740378d84a2cd1adfb128/artifacts
+end_time: 1704792991279
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 936bd8f8a40740378d84a2cd1adfb128
+run_name: delicate-zebra-736
+run_uuid: 936bd8f8a40740378d84a2cd1adfb128
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792991132
+status: 3
+tags: []
+user_id: loren

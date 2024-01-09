@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/296150dc101245bfb0a06e1dab508709/artifacts
+end_time: 1704793042040
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 296150dc101245bfb0a06e1dab508709
+run_name: learned-gull-499
+run_uuid: 296150dc101245bfb0a06e1dab508709
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793041887
+status: 3
+tags: []
+user_id: loren

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/23b0d2e1a0dd4be4aa9ee5b8a4aa6b38/artifacts
+end_time: 1704793014540
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 23b0d2e1a0dd4be4aa9ee5b8a4aa6b38
+run_name: smiling-pig-610
+run_uuid: 23b0d2e1a0dd4be4aa9ee5b8a4aa6b38
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793014340
+status: 3
+tags: []
+user_id: loren

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/c6e7b55aca574e6e97fdaa42aa518775/artifacts
+end_time: 1704793947991
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c6e7b55aca574e6e97fdaa42aa518775
+run_name: skittish-lynx-212
+run_uuid: c6e7b55aca574e6e97fdaa42aa518775
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793947806
+status: 3
+tags: []
+user_id: loren

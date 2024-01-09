@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5e26a34f233c46de98c3c5282eddc202/artifacts
+end_time: 1704793165751
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5e26a34f233c46de98c3c5282eddc202
+run_name: monumental-gnat-646
+run_uuid: 5e26a34f233c46de98c3c5282eddc202
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793165520
+status: 3
+tags: []
+user_id: loren

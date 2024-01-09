@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/d60d91ab72d44384acab333e063cf887/artifacts
+end_time: 1704793046576
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d60d91ab72d44384acab333e063cf887
+run_name: defiant-midge-971
+run_uuid: d60d91ab72d44384acab333e063cf887
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793046365
+status: 3
+tags: []
+user_id: loren

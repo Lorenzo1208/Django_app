@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/1d61b2c54055483aae767c6c12401554/artifacts
+end_time: 1704793942346
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1d61b2c54055483aae767c6c12401554
+run_name: popular-seal-432
+run_uuid: 1d61b2c54055483aae767c6c12401554
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793942075
+status: 3
+tags: []
+user_id: loren

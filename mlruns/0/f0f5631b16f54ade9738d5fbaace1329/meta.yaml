@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/f0f5631b16f54ade9738d5fbaace1329/artifacts
+end_time: 1704792078434
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f0f5631b16f54ade9738d5fbaace1329
+run_name: rambunctious-yak-633
+run_uuid: f0f5631b16f54ade9738d5fbaace1329
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792078340
+status: 3
+tags: []
+user_id: loren

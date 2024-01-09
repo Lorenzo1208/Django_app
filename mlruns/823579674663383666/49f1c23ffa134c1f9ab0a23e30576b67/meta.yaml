@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/823579674663383666/49f1c23ffa134c1f9ab0a23e30576b67/artifacts
+end_time: 1704792514723
+entry_point_name: ''
+experiment_id: '823579674663383666'
+lifecycle_stage: active
+run_id: 49f1c23ffa134c1f9ab0a23e30576b67
+run_name: inquisitive-mare-793
+run_uuid: 49f1c23ffa134c1f9ab0a23e30576b67
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792514573
+status: 3
+tags: []
+user_id: loren

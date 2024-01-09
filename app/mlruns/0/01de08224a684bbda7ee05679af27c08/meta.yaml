@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/01de08224a684bbda7ee05679af27c08/artifacts
+end_time: 1704793477785
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 01de08224a684bbda7ee05679af27c08
+run_name: enchanting-dove-221
+run_uuid: 01de08224a684bbda7ee05679af27c08
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793477648
+status: 3
+tags: []
+user_id: loren

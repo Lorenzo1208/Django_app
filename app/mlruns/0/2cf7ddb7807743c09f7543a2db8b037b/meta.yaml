@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/2cf7ddb7807743c09f7543a2db8b037b/artifacts
+end_time: 1704792986874
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2cf7ddb7807743c09f7543a2db8b037b
+run_name: righteous-colt-91
+run_uuid: 2cf7ddb7807743c09f7543a2db8b037b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792986739
+status: 3
+tags: []
+user_id: loren

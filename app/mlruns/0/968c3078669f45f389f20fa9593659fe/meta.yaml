@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/968c3078669f45f389f20fa9593659fe/artifacts
+end_time: 1704792906185
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 968c3078669f45f389f20fa9593659fe
+run_name: sincere-steed-147
+run_uuid: 968c3078669f45f389f20fa9593659fe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792906035
+status: 3
+tags: []
+user_id: loren

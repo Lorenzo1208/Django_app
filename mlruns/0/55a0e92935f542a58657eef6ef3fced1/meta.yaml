@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/55a0e92935f542a58657eef6ef3fced1/artifacts
+end_time: 1704792075969
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 55a0e92935f542a58657eef6ef3fced1
+run_name: caring-steed-966
+run_uuid: 55a0e92935f542a58657eef6ef3fced1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792075845
+status: 3
+tags: []
+user_id: loren

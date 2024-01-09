@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/772fea8129fa4fd693896322b263d753/artifacts
+end_time: 1704792924626
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 772fea8129fa4fd693896322b263d753
+run_name: illustrious-cub-46
+run_uuid: 772fea8129fa4fd693896322b263d753
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792924344
+status: 3
+tags: []
+user_id: loren

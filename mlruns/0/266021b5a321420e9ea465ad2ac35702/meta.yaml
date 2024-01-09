@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/266021b5a321420e9ea465ad2ac35702/artifacts
+end_time: 1704792071012
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 266021b5a321420e9ea465ad2ac35702
+run_name: dashing-cub-914
+run_uuid: 266021b5a321420e9ea465ad2ac35702
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792070922
+status: 3
+tags: []
+user_id: loren

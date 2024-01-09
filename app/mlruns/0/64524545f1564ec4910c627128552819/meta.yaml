@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/64524545f1564ec4910c627128552819/artifacts
+end_time: 1704792963948
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 64524545f1564ec4910c627128552819
+run_name: adorable-dove-910
+run_uuid: 64524545f1564ec4910c627128552819
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792963718
+status: 3
+tags: []
+user_id: loren

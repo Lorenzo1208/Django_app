@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/95cb1140632740349d40326da90a1f46/artifacts
+end_time: 1704792961647
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 95cb1140632740349d40326da90a1f46
+run_name: flawless-mouse-645
+run_uuid: 95cb1140632740349d40326da90a1f46
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792961498
+status: 3
+tags: []
+user_id: loren

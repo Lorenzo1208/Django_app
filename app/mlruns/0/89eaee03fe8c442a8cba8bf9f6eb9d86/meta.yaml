@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/89eaee03fe8c442a8cba8bf9f6eb9d86/artifacts
+end_time: 1704792913044
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 89eaee03fe8c442a8cba8bf9f6eb9d86
+run_name: shivering-lynx-588
+run_uuid: 89eaee03fe8c442a8cba8bf9f6eb9d86
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792912871
+status: 3
+tags: []
+user_id: loren

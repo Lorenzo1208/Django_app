@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/793cf63cde554f87b692ee150969b31d/artifacts
+end_time: 1704792931844
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 793cf63cde554f87b692ee150969b31d
+run_name: delightful-sow-433
+run_uuid: 793cf63cde554f87b692ee150969b31d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792931450
+status: 3
+tags: []
+user_id: loren

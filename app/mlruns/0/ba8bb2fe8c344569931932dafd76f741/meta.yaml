@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/ba8bb2fe8c344569931932dafd76f741/artifacts
+end_time: 1704792922254
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ba8bb2fe8c344569931932dafd76f741
+run_name: beautiful-dog-873
+run_uuid: ba8bb2fe8c344569931932dafd76f741
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792922104
+status: 3
+tags: []
+user_id: loren

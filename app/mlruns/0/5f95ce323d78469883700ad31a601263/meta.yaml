@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5f95ce323d78469883700ad31a601263/artifacts
+end_time: 1704793057715
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5f95ce323d78469883700ad31a601263
+run_name: peaceful-croc-282
+run_uuid: 5f95ce323d78469883700ad31a601263
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793057563
+status: 3
+tags: []
+user_id: loren

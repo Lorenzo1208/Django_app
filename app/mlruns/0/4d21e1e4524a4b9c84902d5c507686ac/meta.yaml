@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/4d21e1e4524a4b9c84902d5c507686ac/artifacts
+end_time: 1704792952526
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4d21e1e4524a4b9c84902d5c507686ac
+run_name: rambunctious-dog-520
+run_uuid: 4d21e1e4524a4b9c84902d5c507686ac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792952145
+status: 3
+tags: []
+user_id: loren

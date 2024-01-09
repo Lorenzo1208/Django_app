@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/8cff9d4f6dc5407cb02c1a9fc7cd7281/artifacts
+end_time: 1704793028375
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8cff9d4f6dc5407cb02c1a9fc7cd7281
+run_name: crawling-crab-302
+run_uuid: 8cff9d4f6dc5407cb02c1a9fc7cd7281
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793028245
+status: 3
+tags: []
+user_id: loren

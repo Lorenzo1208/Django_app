@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/60ba3e38a20140198b579705e166f78c/artifacts
+end_time: 1704792093095
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 60ba3e38a20140198b579705e166f78c
+run_name: popular-croc-509
+run_uuid: 60ba3e38a20140198b579705e166f78c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792093005
+status: 3
+tags: []
+user_id: loren

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/ebe0616a7e3146ae91bd5cbce09985d0/artifacts
+end_time: 1704792341697
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ebe0616a7e3146ae91bd5cbce09985d0
+run_name: efficient-wasp-976
+run_uuid: ebe0616a7e3146ae91bd5cbce09985d0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792341620
+status: 3
+tags: []
+user_id: loren

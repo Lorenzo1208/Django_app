@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/daf3f13877c5467a9566e3dd6400d4d2/artifacts
+end_time: 1704793000538
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: daf3f13877c5467a9566e3dd6400d4d2
+run_name: unique-robin-879
+run_uuid: daf3f13877c5467a9566e3dd6400d4d2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793000350
+status: 3
+tags: []
+user_id: loren

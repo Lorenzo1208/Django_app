@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/f3b5430929324b5d814632eac6a71791/artifacts
+end_time: 1704792037498
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f3b5430929324b5d814632eac6a71791
+run_name: stately-goat-868
+run_uuid: f3b5430929324b5d814632eac6a71791
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792037329
+status: 3
+tags: []
+user_id: loren

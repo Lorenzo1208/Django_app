@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/de41c639a18c4e7eb14dd6eb1286c212/artifacts
+end_time: 1704793030600
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: de41c639a18c4e7eb14dd6eb1286c212
+run_name: worried-vole-326
+run_uuid: de41c639a18c4e7eb14dd6eb1286c212
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793030433
+status: 3
+tags: []
+user_id: loren

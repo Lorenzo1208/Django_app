@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/c0165ce2a37541c4aac7f75cb572b088/artifacts
+end_time: 1704792995991
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c0165ce2a37541c4aac7f75cb572b088
+run_name: useful-crane-438
+run_uuid: c0165ce2a37541c4aac7f75cb572b088
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792995829
+status: 3
+tags: []
+user_id: loren

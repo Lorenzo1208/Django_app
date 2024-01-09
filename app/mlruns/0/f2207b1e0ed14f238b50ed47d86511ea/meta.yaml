@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/f2207b1e0ed14f238b50ed47d86511ea/artifacts
+end_time: 1704792975504
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f2207b1e0ed14f238b50ed47d86511ea
+run_name: whimsical-toad-494
+run_uuid: f2207b1e0ed14f238b50ed47d86511ea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792975159
+status: 3
+tags: []
+user_id: loren

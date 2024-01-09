@@ -9,7 +9,6 @@ from .models import PatientDailyForm, StressEvaluationForm as StressEvaluationFo
 from .models import DoctorProfile, PatientProfile
 from django.db import transaction
 from django.contrib.auth.decorators import login_required
-
 from django.contrib.auth import get_user_model
 from django.db.models import Count
 from django.utils import timezone
@@ -24,6 +23,41 @@ from django.utils import timezone
 from datetime import timedelta
 from app.models import DoctorProfile, PatientDailyForm, StressEvaluationForm
 from django.shortcuts import get_object_or_404
+from django.http import JsonResponse
+from rest_framework.decorators import api_view
+from django.http import JsonResponse
+from rest_framework.decorators import api_view
+from django.db.models import Avg, Count
+from .models import RequestLog  # Assurez-vous que ce modèle existe
+from .models import ErrorLog
+
+@api_view(['GET'])
+def monitoring(request):
+    # Collecter les métriques
+    metrics = {
+        'nombre_de_requetes': get_request_count(),
+        'temps_de_reponse_moyen': get_average_response_time(),
+        'taux_erreur': get_error_rate(),
+        # Ajoutez d'autres métriques ici
+    }
+
+    return JsonResponse(metrics)
+
+# Fonctions pour calculer les métriques
+def get_request_count():
+    # Compter le nombre total de requêtes enregistrées
+    return RequestLog.objects.count()
+
+def get_average_response_time():
+    # Calculer le temps de réponse moyen
+    average = RequestLog.objects.aggregate(Avg('duration'))
+    return average['duration__avg'] or 0
+
+def get_error_rate():
+    # Supposons que vous avez un modèle ErrorLog pour enregistrer les erreurs
+    total_requests = RequestLog.objects.count()
+    total_errors = ErrorLog.objects.count()  # Assurez-vous que ce modèle existe
+    return (total_errors / total_requests) if total_requests > 0 else 0
 
 
 def home(request):

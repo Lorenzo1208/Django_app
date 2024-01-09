@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/0ea4c618e2234b18b7b741902c8acc64/artifacts
+end_time: 1704793005042
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0ea4c618e2234b18b7b741902c8acc64
+run_name: glamorous-shark-190
+run_uuid: 0ea4c618e2234b18b7b741902c8acc64
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793004883
+status: 3
+tags: []
+user_id: loren

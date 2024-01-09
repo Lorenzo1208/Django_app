@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/823579674663383666/25edba9eebe249069eb7e38c5209c52c/artifacts
+end_time: 1704792512270
+entry_point_name: ''
+experiment_id: '823579674663383666'
+lifecycle_stage: active
+run_id: 25edba9eebe249069eb7e38c5209c52c
+run_name: whimsical-grub-944
+run_uuid: 25edba9eebe249069eb7e38c5209c52c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792512156
+status: 3
+tags: []
+user_id: loren

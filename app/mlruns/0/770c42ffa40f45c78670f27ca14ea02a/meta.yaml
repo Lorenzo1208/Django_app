@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/770c42ffa40f45c78670f27ca14ea02a/artifacts
+end_time: 1704792915518
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 770c42ffa40f45c78670f27ca14ea02a
+run_name: unruly-snail-234
+run_uuid: 770c42ffa40f45c78670f27ca14ea02a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792915146
+status: 3
+tags: []
+user_id: loren

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/7e50552b94ab4d99b5bb3101e8b65c90/artifacts
+end_time: 1704792080846
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7e50552b94ab4d99b5bb3101e8b65c90
+run_name: colorful-dolphin-218
+run_uuid: 7e50552b94ab4d99b5bb3101e8b65c90
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792080757
+status: 3
+tags: []
+user_id: loren

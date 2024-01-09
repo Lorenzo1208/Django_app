@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/1a29fbe757ed4d1bba6a192cde5c3861/artifacts
+end_time: 1704792970853
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1a29fbe757ed4d1bba6a192cde5c3861
+run_name: rumbling-bat-579
+run_uuid: 1a29fbe757ed4d1bba6a192cde5c3861
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792970708
+status: 3
+tags: []
+user_id: loren

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/f1d42ccb50f642a59bd311c6ca73641e/artifacts
+end_time: 1704793051007
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f1d42ccb50f642a59bd311c6ca73641e
+run_name: bustling-hound-32
+run_uuid: f1d42ccb50f642a59bd311c6ca73641e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793050849
+status: 3
+tags: []
+user_id: loren

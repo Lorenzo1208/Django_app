@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/2e230428d4ef480b8b781f30b9666aa9/artifacts
+end_time: 1704792097923
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2e230428d4ef480b8b781f30b9666aa9
+run_name: burly-calf-586
+run_uuid: 2e230428d4ef480b8b781f30b9666aa9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792097851
+status: 3
+tags: []
+user_id: loren

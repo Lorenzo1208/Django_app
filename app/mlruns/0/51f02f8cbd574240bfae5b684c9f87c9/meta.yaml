@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/51f02f8cbd574240bfae5b684c9f87c9/artifacts
+end_time: 1704792929346
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 51f02f8cbd574240bfae5b684c9f87c9
+run_name: big-croc-465
+run_uuid: 51f02f8cbd574240bfae5b684c9f87c9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792929197
+status: 3
+tags: []
+user_id: loren

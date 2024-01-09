@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/b7fdec84f6ce41e680d37a98da9a698e/artifacts
+end_time: 1704793390349
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b7fdec84f6ce41e680d37a98da9a698e
+run_name: blushing-colt-634
+run_uuid: b7fdec84f6ce41e680d37a98da9a698e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793390047
+status: 3
+tags: []
+user_id: loren

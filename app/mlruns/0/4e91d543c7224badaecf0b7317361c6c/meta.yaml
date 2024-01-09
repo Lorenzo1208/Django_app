@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/4e91d543c7224badaecf0b7317361c6c/artifacts
+end_time: 1704793012251
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4e91d543c7224badaecf0b7317361c6c
+run_name: burly-trout-379
+run_uuid: 4e91d543c7224badaecf0b7317361c6c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793012109
+status: 3
+tags: []
+user_id: loren

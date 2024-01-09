@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/13b8f765a4f2456c91b82d21736e9993/artifacts
+end_time: 1704793576116
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 13b8f765a4f2456c91b82d21736e9993
+run_name: fortunate-shrike-252
+run_uuid: 13b8f765a4f2456c91b82d21736e9993
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793575982
+status: 3
+tags: []
+user_id: loren

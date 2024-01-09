@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/823579674663383666/19c93c542e9a48fbb49160726f0d67f2/artifacts
+end_time: 1704792504576
+entry_point_name: ''
+experiment_id: '823579674663383666'
+lifecycle_stage: active
+run_id: 19c93c542e9a48fbb49160726f0d67f2
+run_name: colorful-bug-94
+run_uuid: 19c93c542e9a48fbb49160726f0d67f2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792504373
+status: 3
+tags: []
+user_id: loren

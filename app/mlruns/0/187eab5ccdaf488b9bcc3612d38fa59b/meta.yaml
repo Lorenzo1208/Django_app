@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/187eab5ccdaf488b9bcc3612d38fa59b/artifacts
+end_time: 1704792934278
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 187eab5ccdaf488b9bcc3612d38fa59b
+run_name: flawless-bee-879
+run_uuid: 187eab5ccdaf488b9bcc3612d38fa59b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792933970
+status: 3
+tags: []
+user_id: loren

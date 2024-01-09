@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/ae3a630f80cc4c6cb4f63c381c564ad4/artifacts
+end_time: 1704792053338
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ae3a630f80cc4c6cb4f63c381c564ad4
+run_name: agreeable-shrimp-357
+run_uuid: ae3a630f80cc4c6cb4f63c381c564ad4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792053218
+status: 3
+tags: []
+user_id: loren

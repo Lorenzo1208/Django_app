@@ -180,3 +180,13 @@ for symptom in StressEvaluationForm.SYMPTOMS:
     field = models.IntegerField(choices=StressEvaluationForm.CHOICES, verbose_name=symptom)
     setattr(StressEvaluationForm, symptom, field)
 
+from django.db import models
+
+class RequestLog(models.Model):
+    path = models.CharField(max_length=200)
+    duration = models.FloatField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+class ErrorLog(models.Model):
+    message = models.TextField()  # ou tout autre champ pertinent
+    timestamp = models.DateTimeField(auto_now_add=True)

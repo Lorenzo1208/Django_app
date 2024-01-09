@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/7fbd83f3204c4a5e81840efd38b3ebd5/artifacts
+end_time: 1704792943161
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7fbd83f3204c4a5e81840efd38b3ebd5
+run_name: tasteful-slug-244
+run_uuid: 7fbd83f3204c4a5e81840efd38b3ebd5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792943026
+status: 3
+tags: []
+user_id: loren

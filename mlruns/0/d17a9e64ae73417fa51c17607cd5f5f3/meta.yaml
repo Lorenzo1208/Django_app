@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/d17a9e64ae73417fa51c17607cd5f5f3/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d17a9e64ae73417fa51c17607cd5f5f3
+run_name: traveling-auk-389
+run_uuid: d17a9e64ae73417fa51c17607cd5f5f3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792669158
+status: 1
+tags: []
+user_id: loren

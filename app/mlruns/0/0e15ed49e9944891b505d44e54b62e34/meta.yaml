@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/0e15ed49e9944891b505d44e54b62e34/artifacts
+end_time: 1704793571614
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0e15ed49e9944891b505d44e54b62e34
+run_name: efficient-croc-355
+run_uuid: 0e15ed49e9944891b505d44e54b62e34
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793571463
+status: 3
+tags: []
+user_id: loren

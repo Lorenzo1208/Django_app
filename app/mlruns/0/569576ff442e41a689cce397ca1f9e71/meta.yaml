@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/569576ff442e41a689cce397ca1f9e71/artifacts
+end_time: 1704793055475
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 569576ff442e41a689cce397ca1f9e71
+run_name: worried-rat-75
+run_uuid: 569576ff442e41a689cce397ca1f9e71
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793055332
+status: 3
+tags: []
+user_id: loren

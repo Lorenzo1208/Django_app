@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/900f48e622644f1689591816bb871b2b/artifacts
+end_time: 1704793569418
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 900f48e622644f1689591816bb871b2b
+run_name: masked-snake-417
+run_uuid: 900f48e622644f1689591816bb871b2b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793569193
+status: 3
+tags: []
+user_id: loren

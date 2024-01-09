@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/7eadea6fff334d47854bf99e3305c574/artifacts
+end_time: 1704792957142
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7eadea6fff334d47854bf99e3305c574
+run_name: unruly-fly-735
+run_uuid: 7eadea6fff334d47854bf99e3305c574
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792956897
+status: 3
+tags: []
+user_id: loren

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/46e5ce35390d44e088086f0e0b70a921/artifacts
+end_time: 1704792984642
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 46e5ce35390d44e088086f0e0b70a921
+run_name: bemused-dove-369
+run_uuid: 46e5ce35390d44e088086f0e0b70a921
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792984373
+status: 3
+tags: []
+user_id: loren

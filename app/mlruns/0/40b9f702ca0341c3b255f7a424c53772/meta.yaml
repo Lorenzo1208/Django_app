@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/40b9f702ca0341c3b255f7a424c53772/artifacts
+end_time: 1704793163435
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 40b9f702ca0341c3b255f7a424c53772
+run_name: nebulous-rook-425
+run_uuid: 40b9f702ca0341c3b255f7a424c53772
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793163236
+status: 3
+tags: []
+user_id: loren

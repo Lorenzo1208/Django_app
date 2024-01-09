@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/eb9ea0ad6f1e46cc8e8f25f7d8b9c79e/artifacts
+end_time: 1704792063393
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eb9ea0ad6f1e46cc8e8f25f7d8b9c79e
+run_name: peaceful-wolf-629
+run_uuid: eb9ea0ad6f1e46cc8e8f25f7d8b9c79e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792063299
+status: 3
+tags: []
+user_id: loren

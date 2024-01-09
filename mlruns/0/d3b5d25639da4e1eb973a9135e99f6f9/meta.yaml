@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/d3b5d25639da4e1eb973a9135e99f6f9/artifacts
+end_time: 1704792090714
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d3b5d25639da4e1eb973a9135e99f6f9
+run_name: luminous-boar-504
+run_uuid: d3b5d25639da4e1eb973a9135e99f6f9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792090633
+status: 3
+tags: []
+user_id: loren

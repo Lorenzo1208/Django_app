@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/b8489e1ba24548469c94754faab85ee0/artifacts
+end_time: 1704793026188
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b8489e1ba24548469c94754faab85ee0
+run_name: youthful-midge-705
+run_uuid: b8489e1ba24548469c94754faab85ee0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793026001
+status: 3
+tags: []
+user_id: loren

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/f214b367c6124a84b6ca19cbe6f96f80/artifacts
+end_time: 1704793310188
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f214b367c6124a84b6ca19cbe6f96f80
+run_name: intrigued-fawn-128
+run_uuid: f214b367c6124a84b6ca19cbe6f96f80
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704793309928
+status: 3
+tags: []
+user_id: loren

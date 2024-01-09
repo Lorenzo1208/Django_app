@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/loren/OneDrive/Bureau/a/Django_app/mlruns/0/a55d1992edf34458a194002f76133468/artifacts
+end_time: 1704792048093
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a55d1992edf34458a194002f76133468
+run_name: shivering-ant-29
+run_uuid: a55d1992edf34458a194002f76133468
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704792047988
+status: 3
+tags: []
+user_id: loren
