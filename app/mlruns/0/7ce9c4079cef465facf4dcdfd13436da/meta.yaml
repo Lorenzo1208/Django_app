@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/7ce9c4079cef465facf4dcdfd13436da/artifacts
+end_time: 1704807330035
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7ce9c4079cef465facf4dcdfd13436da
+run_name: persistent-jay-153
+run_uuid: 7ce9c4079cef465facf4dcdfd13436da
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704807329875
+status: 3
+tags: []
+user_id: loren

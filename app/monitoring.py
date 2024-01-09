@@ -5,7 +5,7 @@ import time
 import psutil
 
 # URL de votre endpoint de monitoring
-monitoring_url = 'http://127.0.0.1:8000/monitoring/'
+monitoring_url = 'http://127.0.0.1:8000/'
 
 # URL de webhook Discord
 webhook_url = 'https://discord.com/api/webhooks/1194197927166496848/C5wdNbiKkmhTtWEzzMzaQiHZ6e2dGovuildVAMZWPYymtibCWqA-1EvRdC9m2nLPcvuZ'

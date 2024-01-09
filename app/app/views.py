@@ -30,6 +30,7 @@ from rest_framework.decorators import api_view
 from django.db.models import Avg, Count
 from .models import RequestLog  # Assurez-vous que ce modèle existe
 from .models import ErrorLog
+import requests
 
 @api_view(['GET'])
 def monitoring(request):
@@ -59,6 +60,13 @@ def get_error_rate():
     total_errors = ErrorLog.objects.count()  # Assurez-vous que ce modèle existe
     return (total_errors / total_requests) if total_requests > 0 else 0
 
+def division_par_zero(request):
+    result = 1 / 0  # Ceci provoquera une division par zéro intentionnelle
+    return HttpResponse("Cette vue provoque une division par zéro.")
+
+def test_view(request):
+    raise Exception("Ceci est un test d'exception.")
+    return HttpResponse("Cette vue ne devrait jamais être atteinte.")
 
 def home(request):
     return render(request, 'home.html')

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/7d53a9d18d33447781aa561e41740e3e/artifacts
+end_time: 1704795458626
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7d53a9d18d33447781aa561e41740e3e
+run_name: worried-duck-960
+run_uuid: 7d53a9d18d33447781aa561e41740e3e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704795458373
+status: 3
+tags: []
+user_id: loren

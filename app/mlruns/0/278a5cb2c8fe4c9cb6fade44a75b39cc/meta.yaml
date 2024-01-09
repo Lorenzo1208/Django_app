@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/278a5cb2c8fe4c9cb6fade44a75b39cc/artifacts
+end_time: 1704795475562
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 278a5cb2c8fe4c9cb6fade44a75b39cc
+run_name: resilient-hen-774
+run_uuid: 278a5cb2c8fe4c9cb6fade44a75b39cc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704795475245
+status: 3
+tags: []
+user_id: loren

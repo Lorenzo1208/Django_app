@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/2f7481d878a142c4b945b12465d7f52c/artifacts
+end_time: 1704805251032
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2f7481d878a142c4b945b12465d7f52c
+run_name: peaceful-ram-223
+run_uuid: 2f7481d878a142c4b945b12465d7f52c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704805250807
+status: 3
+tags: []
+user_id: loren

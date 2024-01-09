@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/92e80cc4b0bf47b59331d27f21bcb04e/artifacts
+end_time: 1704796754724
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 92e80cc4b0bf47b59331d27f21bcb04e
+run_name: capable-auk-278
+run_uuid: 92e80cc4b0bf47b59331d27f21bcb04e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704796754502
+status: 3
+tags: []
+user_id: loren
