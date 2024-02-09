@@ -25,7 +25,14 @@ SECRET_KEY = 'django-insecure-%9i5l)h5k=5033s5a+!5tdqwd)h2=cj5es)x6nrvve6q2&3w9p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+    }
+}
+
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,6 +50,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # 'app.middleware.BlockIPMiddleware',
     'app.middleware.DiscordErrorMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
